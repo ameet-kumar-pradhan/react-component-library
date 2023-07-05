@@ -20,6 +20,9 @@
     "files": [
         "dist"
     ],
+    "publishConfig": {
+        "registry": "https://gitlab.dewsolutions.in/api/v4/projects/416/packages/npm/"
+    },
     "types": "dist/index.d.ts",
     "author": "Ameet Pradhan",
     "license": "ISC",
