@@ -14,11 +14,13 @@ export default [
                 file: packageJson.main,
                 format: "cjs",
                 sourcemap: true,
+                plugins: [terser()], // Optional: Minify the output file
             },
             {
                 file: packageJson.module,
                 format: "esm",
                 sourcemap: true,
+                plugins: [terser()], // Optional: Minify the output file
             },
         ],
         plugins: [
@@ -29,7 +31,12 @@ export default [
     },
     {
         input: "dist/esm/types/index.d.ts",
-        output: [{ file: "dist/index.d.ts", format: "esm" }],
+        output: [
+            {
+                file: "dist/index.d.ts",
+                format: "esm",
+            },
+        ],
         plugins: [dts()],
     },
 ];
