@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
+import peerDepsExternal from '@types/rollup-plugin-peer-deps-external';
 
 import packageJson from "./package.json" assert { type: "json" };
 
@@ -14,20 +15,21 @@ export default [
                 file: packageJson.main,
                 format: "cjs",
                 sourcemap: true,
-                plugins: [terser()], // Optional: Minify the output file
             },
             {
                 file: packageJson.module,
                 format: "esm",
                 sourcemap: true,
-                plugins: [terser()], // Optional: Minify the output file
             },
         ],
         plugins: [
+            peerDepsExternal(),
             resolve(),
             commonjs(),
             typescript({ tsconfig: "./tsconfig.json" }),
+            terser(), //Minify the output file
         ],
+        external: ["react"],
     },
     {
         input: "dist/esm/types/index.d.ts",
