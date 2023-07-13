@@ -21,7 +21,7 @@ export default [
                 babelHelpers: "bundled",
                 exclude: "node_modules/**",
             }),
-            typescript({ tsconfig: "./tsconfig.json" }),
+            typescript({ tsconfig: "./tsconfig.json", sourceMap: false }),
             terser(), //Minify the output file
 
         ],
