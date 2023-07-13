@@ -1,11 +1,11 @@
 {
     "name": "@reusable-components/template-react-component-library",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A template react component library",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "rollup": "rm -rf dist && rollup -c",
-        "publish": "npm version patch --force && npm publish"
+        "patch": "npm version patch --force"
     },
     "repository": {
         "type": "git",
