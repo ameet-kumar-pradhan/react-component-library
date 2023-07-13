@@ -1,17 +1,16 @@
 {
-    "name": "template-react-component-library",
+    "name": "@reusable-components/template-react-component-library",
     "version": "0.0.2",
     "description": "A template react component library",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "rollup": "rollup -c",
-        "pub": "npm version patch --force && npm publish"
+        "rollup": "rm -rf dist && rollup -c",
+        "publish": "npm version patch --force && npm publish"
     },
     "repository": {
         "type": "git",
         "url": "https://gitlab.dewsolutions.in/reusable-components/frontend/react/template-react-component-library.git"
     },
-    "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "keywords": [
         "template",
@@ -28,6 +27,7 @@
     "author": "Ameet Pradhan",
     "license": "ISC",
     "devDependencies": {
+        "@rollup/plugin-babel": "^6.0.3",
         "@rollup/plugin-commonjs": "^25.0.2",
         "@rollup/plugin-node-resolve": "^15.1.0",
         "@rollup/plugin-terser": "^0.4.3",
