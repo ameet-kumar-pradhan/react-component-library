@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://gitlab.dewsolutions.in/reusable-components/frontend/react/template-react-component-library.git"
+        "url": "https://github.com/ameet-kumar-pradhan/react-component-library.git"
     },
     "module": "dist/esm/index.js",
     "keywords": [
@@ -21,7 +21,7 @@
         "dist"
     ],
     "publishConfig": {
-        "registry": "https://gitlab.dewsolutions.in/api/v4/projects/416/packages/npm/"
+        "registry": "https://npm.pkg.github.com"
     },
     "types": "dist/index.d.ts",
     "author": "Ameet Pradhan",
@@ -41,6 +41,6 @@
         "typescript": "^5.1.6"
     },
     "peerDependencies": {
-        "react": "^18.2.0"
+        "react": "*"
     }
 }
